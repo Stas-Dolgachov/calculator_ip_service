@@ -1,0 +1,19 @@
+.calc-field-title__toggleable {
+  cursor: pointer; }
+
+.calc__btn:disabled {
+  background-color: #ddd;
+  transition: none; }
+  .calc__btn:disabled:hover {
+    background-color: #ddd; }
+
+.calc-results {
+  font-size: 16px; }
+  .calc-results__btns-wrap button {
+    float: right; }
+  .calc-results__btns-wrap:after {
+    content: '';
+    display: table;
+    clear: both; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1vZHVsZXMvX2NhbGMuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUlnQixnQkFBZ0IsRUFBRzs7QUFKbkM7RUFPUSx1QkFBdUI7RUFDdkIsaUJBQWlCLEVBRWU7RUFWeEM7SUFVWSx1QkFBdUIsRUFBRzs7QUFWdEM7RUFhUSxnQkFBZ0IsRUFPVztFQXBCbkM7SUFnQmdCLGFBQWEsRUFBRztFQWhCaEM7SUFrQmdCLFlBQVk7SUFDWixlQUFlO0lBQ2YsWUFBWSxFQUFHIiwiZmlsZSI6ImNhbGMtbWFpbi5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY2FsYyB7XG4gICAgJi1maWVsZCB7XG4gICAgICAgICYtdGl0bGUge1xuICAgICAgICAgICAgJl9fdG9nZ2xlYWJsZSB7XG4gICAgICAgICAgICAgICAgY3Vyc29yOiBwb2ludGVyOyB9IH0gfVxuXG4gICAgJl9fYnRuOmRpc2FibGVkIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICAgICAgdHJhbnNpdGlvbjogbm9uZTtcbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkOyB9IH1cblxuICAgICYtcmVzdWx0cyB7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgJl9fYnRucy13cmFwIHtcbiAgICAgICAgICAgIGJ1dHRvbiB7XG4gICAgICAgICAgICAgICAgZmxvYXQ6IHJpZ2h0OyB9XG4gICAgICAgICAgICAmOmFmdGVyIHtcbiAgICAgICAgICAgICAgICBjb250ZW50OiAnJztcbiAgICAgICAgICAgICAgICBkaXNwbGF5OiB0YWJsZTtcbiAgICAgICAgICAgICAgICBjbGVhcjogYm90aDsgfSB9IH0gfVxuXG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

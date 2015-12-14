@@ -1,0 +1,23 @@
+{
+  "name": "calc",
+  "version": "0.0.0",
+  "authors": [
+    "Stas"
+  ],
+  "description": "no",
+  "main": "index.html",
+  "keywords": [
+    "calc"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "~1.0.11"
+  }
+}

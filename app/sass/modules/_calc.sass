@@ -1,0 +1,22 @@
+.calc
+    &-field
+        &-title
+            &__toggleable
+                cursor: pointer
+
+    &__btn:disabled
+        background-color: #ddd
+        transition: none
+        &:hover
+            background-color: #ddd
+
+    &-results
+        font-size: 16px
+        &__btns-wrap
+            button
+                float: right
+            &:after
+                content: ''
+                display: table
+                clear: both
+            

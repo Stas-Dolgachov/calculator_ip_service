@@ -4,7 +4,7 @@
 var services = require('./servicesList');
 var calculatorModule = (function () {
     function init() {
-        var modalLink = document.querySelector('[data-popup-id="3"]');
+        var modalLink = document.querySelector('a[data-popup-id="3"]');
         var closeModalBtn = document.querySelector('.js-close-result');
         var orderCallModal = document.querySelector('a[data-popup-id="2"]');
 
@@ -84,6 +84,8 @@ var calculatorModule = (function () {
                 }
             }
         });
+
+        return vm;
     }
 
     return {
@@ -96,7 +98,7 @@ module.exports = calculatorModule;
 },{"./servicesList":3}],2:[function(require,module,exports){
 'use strict';
 
-var calculator = require('./calculatorViewModel.js');
+var calculator = require('./calculator.js');
 
 function ready(fn) {
     if (document.readyState !== 'loading') {
@@ -112,14 +114,14 @@ function main() {
 
 ready(main);
 
-},{"./calculatorViewModel.js":1}],3:[function(require,module,exports){
+},{"./calculator.js":1}],3:[function(require,module,exports){
 'use strict';
 
-function getPriceForFour(coefList, qty) {
-    var low = coefList[0];
-    var medium = coefList[1];
-    var high = coefList[2];
-    var veryHigh = coefList[3];
+function computePriceForFourRanges(priceList, qty) {
+    var low = priceList[0];
+    var medium = priceList[1];
+    var high = priceList[2];
+    var veryHigh = priceList[3];
 
     if (!qty) {
         return 0;
@@ -127,30 +129,22 @@ function getPriceForFour(coefList, qty) {
 
     if (qty <= 50) {
         return qty * low;
-    }
-
-    if (qty > 50 && qty <= 200) {
+    } else if (qty > 50 && qty <= 200) {
         return qty * medium;
-    }
-
-    if (qty > 200 && qty <= 500) {
+    } else if (qty > 200 && qty <= 500) {
         return qty * high;
-    }
-
-    if (qty > 500) {
+    } else if (qty > 500) {
         return qty * veryHigh;
     }
 }
 
-function getPriceForTwo(coefList, boundary, qty) {
-    var low = coefList[0];
-    var high = coefList[1];
+function computePriceForTwoRanges(priceList, boundary, qty) {
+    var low = priceList[0];
+    var high = priceList[1];
 
     if (!qty) {
         return 0;
-    }
-
-    if (qty <= boundary) {
+    } else if (qty <= boundary) {
         return qty * low;
     } else {
         return qty * high;
@@ -164,9 +158,9 @@ var services = {
         unit: 'кв. м.',
         getPrice: function getPrice() {
             var qty = this.qty;
-            var coefList = [22, 18, 15, 12];
+            var priceList = [22, 18, 15, 12];
 
-            return getPriceForFour(coefList, qty);
+            return computePriceForFourRanges(priceList, qty);
         }
     },
 
@@ -176,9 +170,9 @@ var services = {
         unit: 'кв. м.',
         getPrice: function getPrice() {
             var qty = this.qty;
-            var coefList = [23, 19, 16, 13];
+            var priceList = [23, 19, 16, 13];
 
-            return getPriceForFour(coefList, qty);
+            return computePriceForFourRanges(priceList, qty);
         }
     },
 
@@ -188,10 +182,10 @@ var services = {
         unit: 'кв. м.',
         getPrice: function getPrice() {
             var qty = this.qty;
-            var coefList = [6, 5];
+            var priceList = [6, 5];
             var boundary = 50;
 
-            return getPriceForTwo(coefList, boundary, qty);
+            return computePriceForTwoRanges(priceList, boundary, qty);
         }
     },
 
@@ -201,10 +195,10 @@ var services = {
         unit: 'кв. м.',
         getPrice: function getPrice() {
             var qty = this.qty;
-            var coefList = [8, 7];
+            var priceList = [8, 7];
             var boundary = 50;
 
-            return getPriceForTwo(coefList, boundary, qty);
+            return computePriceForTwoRanges(priceList, boundary, qty);
         }
     },
 
@@ -214,10 +208,10 @@ var services = {
         unit: 'кв. м.',
         getPrice: function getPrice() {
             var qty = this.qty;
-            var coefList = [7, 6];
+            var priceList = [7, 6];
             var boundary = 50;
 
-            return getPriceForTwo(coefList, boundary, qty);
+            return computePriceForTwoRanges(priceList, boundary, qty);
         }
     },
 
@@ -227,23 +221,23 @@ var services = {
         unit: 'кв. м.',
         getPrice: function getPrice() {
             var qty = this.qty;
-            var coefList = [8, 7];
+            var priceList = [8, 7];
             var boundary = 500;
 
-            return getPriceForTwo(coefList, boundary, qty);
+            return computePriceForTwoRanges(priceList, boundary, qty);
         }
     },
 
     sofaDryClean: {
         qty: 0,
         name: 'Химическая чистка диванов',
-        unit: 'мест(а)',
+        unit: 'посад. мест(а)',
         getPrice: function getPrice() {
             var qty = this.qty;
-            var coefList = [45, 35];
+            var priceList = [45, 35];
             var boundary = 5;
 
-            return getPriceForTwo(coefList, boundary, qty);
+            return computePriceForTwoRanges(priceList, boundary, qty);
         }
     },
 
@@ -253,10 +247,10 @@ var services = {
         unit: 'шт.',
         getPrice: function getPrice() {
             var qty = this.qty;
-            var coefList = [45, 40];
+            var priceList = [45, 40];
             var boundary = 5;
 
-            return getPriceForTwo(coefList, boundary, qty);
+            return computePriceForTwoRanges(priceList, boundary, qty);
         }
     },
 
@@ -266,10 +260,10 @@ var services = {
         unit: 'шт.',
         getPrice: function getPrice() {
             var qty = this.qty;
-            var coefList = [20, 15];
+            var priceList = [20, 15];
             var boundary = 70;
 
-            return getPriceForTwo(coefList, boundary, qty);
+            return computePriceForTwoRanges(priceList, boundary, qty);
         }
     },
 
@@ -291,23 +285,10 @@ var services = {
         unit: 'кв. м.',
         getPrice: function getPrice() {
             var qty = this.qty;
-            var coefList = [7, 6];
+            var priceList = [7, 6];
             var boundary = 500;
 
-            return getPriceForTwo(coefList, boundary, qty);
-        }
-    },
-
-    floorDryCleanWithCoating: {
-        qty: 0,
-        name: 'Химическая чистка пола с нанесением защитного полимерного покрытия',
-        unit: 'кв. м.',
-        getPrice: function getPrice() {
-            var qty = this.qty;
-            var coefList = [35, 30];
-            var boundary = 500;
-
-            return getPriceForTwo(coefList, boundary, qty);
+            return computePriceForTwoRanges(priceList, boundary, qty);
         }
     },
 

@@ -1,6 +1,6 @@
 'use strict';
 
-var calculator = require('./calculatorViewModel.js');
+var calculator = require('./calculator.js');
 
 function ready(fn) {
     if (document.readyState !== 'loading'){

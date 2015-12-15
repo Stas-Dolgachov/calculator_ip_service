@@ -63,7 +63,7 @@
     <link rel="stylesheet" id="us-style-css" href="./vendor/style.css" type="text/css" media="all">
     <link rel="stylesheet" id="us-responsive-css" href="./vendor/responsive.css" type="text/css" media="all">
     <link rel="stylesheet" id="us_custom_css-css" href="./vendor/us_impreza_custom_styles.css" type="text/css" media="all">
-    <link rel="stylesheet" href="./css/calc-main.css">
+    <link rel="stylesheet" href="./css/calc-module.css">
     <script type="text/javascript">
         /* <![CDATA[ */
         var ajaxurl = "http:\/\/www.ip-service.com.ua\/wp-admin\/admin-ajax.php";
@@ -453,18 +453,20 @@
                             <div class="wpcc_box wpcc_box_4" style="display: block;">
                                 <div class="wpcc_description">
                                     <h3 v-on:click="toggleGeneralCleanInfo"
-                                            class="calc-field-title__toggleable">Генеральная уборка</h3>
+                                            class="calc-field-title__toggleable">Генеральная уборка<i class="calc-field__info-icon fa fa-angle-down"></i></h3>
                                 </div>
                                 <div v-if="generalCleanShow"
                                         class="wpcc_fields wpcc_text wpcc_text_4">
-                                    влажная и сухая уборка пола (паркет, линолеум, ламинат, плитка и т.п.);<br>
-                                    протирание дверных блоков;<br>
-                                    комплексная уборка и дезинфекция туалетов и ванных комнат;<br>
-                                    удаление пыли и локального загрязнения с зеркальных и стеклянных поверхностей;<br>
-                                    удаление пыли и загрязнения с мебели и предметов интерьера;<br>
-                                    мытье окон с внутренней стороны;<br>
-                                    удаление пыли с выключателей, ламп, розеток;<br>
-                                    уборка мусора
+                                    <ul>
+                                        <li>влажная и сухая уборка пола (паркет, линолеум, ламинат, плитка и т.п.);</li>
+                                        <li>протирание дверных блоков;</li>
+                                        <li>комплексная уборка и дезинфекция туалетов и ванных комнат;</li>
+                                        <li>удаление пыли и локального загрязнения с зеркальных и стеклянных поверхностей;</li>
+                                        <li>удаление пыли и загрязнения с мебели и предметов интерьера;</li>
+                                        <li>мытье окон с внутренней стороны;</li>
+                                        <li>удаление пыли с выключателей, ламп, розеток;</li>
+                                        <li>уборка мусора</li>
+                                    </ul>
                                 </div>
                                 <div class="wpcc_clear"></div>
                             </div>
@@ -474,7 +476,7 @@
                                 </div>
                                 <div class="wpcc_fields">
                                     <input v-model="services.generalClean.qty"
-                                           type="number" min="0" name="wpcc_structure[3]" value="" class="wpcc_jq_action wpcc_jq_action_3 wpcc_inputtext wpcc_inputtext_3" placeholder="Введите площадь" data-type="inputtext" data-fid="3" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
+                                           type="number" min="0" name="wpcc_structure[3]" value="" class="wpcc_jq_action wpcc_jq_action_3 wpcc_inputtext wpcc_inputtext_3" placeholder="Введите площадь, м2" data-type="inputtext" data-fid="3" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
                                 </div>
                                 <div class="wpcc_clear"></div>
                             </div>
@@ -483,20 +485,22 @@
                             <div class="wpcc_box wpcc_box_8" style="display: block;">
                                 <div class="wpcc_description">
                                     <h3 v-on:click="toggleAfterConstructInfo"
-                                            class="calc-field-title__toggleable">Уборка после ремонта и строительства</h3>
+                                            class="calc-field-title__toggleable">Уборка после ремонта и строительства<i class="calc-field__info-icon fa fa-angle-down"></i></h3>
                                 </div>
                                 <div v-if="afterConstructShow"
                                      class="wpcc_fields wpcc_text wpcc_text_8 ">
-                                    влажная уборка пола; <br>
-                                    удаление остатков строительных материалов; <br>
-                                    протирание дверных блоков; <br>
-                                    комплексная уборка и дезинфекция туалетов и ванных комнат; <br>
-                                    удаление пыли и локального загрязнения с зеркальных и стеклянных поверхностей; <br>
-                                    удаление пыли и загрязнения с мебели и предметов интерьера; <br>
-                                    мытье окон с внутренней стороны; <br>
-                                    удаление пыли с выключателей, ламп, розеток; <br>
-                                    удаление строительных загрязнений с пола (паркет, линолеум, ламинат, плитка и т.п.); <br>
-                                    уборка мусора
+                                    <ul>
+                                        <li>влажная уборка пола;</li>
+                                        <li>удаление остатков строительных материалов;</li>
+                                        <li>протирание дверных блоков;</li>
+                                        <li>комплексная уборка и дезинфекция туалетов и ванных комнат;</li>
+                                        <li>удаление пыли и локального загрязнения с зеркальных и стеклянных поверхностей;</li>
+                                        <li>удаление пыли и загрязнения с мебели и предметов интерьера;</li>
+                                        <li>мытье окон с внутренней стороны;</li>
+                                        <li>удаление пыли с выключателей, ламп, розеток;</li>
+                                        <li>удаление строительных загрязнений с пола (паркет, линолеум, ламинат, плитка и т.п.);</li>
+                                        <li>уборка мусора</li>
+                                    </ul>
                                 </div>
                                 <div class="wpcc_clear"></div>
                             </div>
@@ -506,7 +510,7 @@
                                 </div>
                                 <div class="wpcc_fields">
                                     <input v-model="services.afterConstructionClean.qty"
-                                            type="number" min="0" name="wpcc_structure[9]" value="" class="wpcc_jq_action wpcc_jq_action_9 wpcc_inputtext wpcc_inputtext_9" placeholder="Введите площадь" data-type="inputtext" data-fid="9" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
+                                            type="number" min="0" name="wpcc_structure[9]" value="" class="wpcc_jq_action wpcc_jq_action_9 wpcc_inputtext wpcc_inputtext_9" placeholder="Введите площадь, м2" data-type="inputtext" data-fid="9" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
                                 </div>
                                 <div class="wpcc_clear"></div>
                             </div>
@@ -518,7 +522,7 @@
                                 </div>
                                 <div class="wpcc_fields">
                                     <input v-model="services.windowInClean.qty"
-                                            type="number" min="0" name="wpcc_structure[35]" value="" class="wpcc_jq_action wpcc_jq_action_35 wpcc_inputtext wpcc_inputtext_35" placeholder="Введите площадь" data-type="inputtext" data-fid="35" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
+                                            type="number" min="0" name="wpcc_structure[35]" value="" class="wpcc_jq_action wpcc_jq_action_35 wpcc_inputtext wpcc_inputtext_35" placeholder="Введите площадь, м2" data-type="inputtext" data-fid="35" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
                                 </div>
                                 <div class="wpcc_clear"></div>
                             </div>
@@ -530,7 +534,7 @@
                                 </div>
                                 <div class="wpcc_fields">
                                     <input v-model="services.windowOutClean.qty"
-                                            type="number" min="0" name="wpcc_structure[37]" value="" class="wpcc_jq_action wpcc_jq_action_37 wpcc_inputtext wpcc_inputtext_37" placeholder="Введите площадь" data-type="inputtext" data-fid="37" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
+                                            type="number" min="0" name="wpcc_structure[37]" value="" class="wpcc_jq_action wpcc_jq_action_37 wpcc_inputtext wpcc_inputtext_37" placeholder="Введите площадь, м2" data-type="inputtext" data-fid="37" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
                                 </div>
                                 <div class="wpcc_clear"></div>
                             </div>
@@ -542,7 +546,7 @@
                                 </div>
                                 <div class="wpcc_fields">
                                     <input v-model="services.shopWindowClean.qty"
-                                            type="number" min="0" name="wpcc_structure[39]" value="" class="wpcc_jq_action wpcc_jq_action_39 wpcc_inputtext wpcc_inputtext_39" placeholder="Введите площадь" data-type="inputtext" data-fid="39" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
+                                            type="number" min="0" name="wpcc_structure[39]" value="" class="wpcc_jq_action wpcc_jq_action_39 wpcc_inputtext wpcc_inputtext_39" placeholder="Введите площадь, м2" data-type="inputtext" data-fid="39" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
                                 </div>
                                 <div class="wpcc_clear"></div>
                             </div>
@@ -554,7 +558,7 @@
                                 </div>
                                 <div class="wpcc_fields">
                                     <input v-model="services.carpetDryClean.qty"
-                                            type="number" min="0" name="wpcc_structure[26]" value="" class="wpcc_jq_action wpcc_jq_action_26 wpcc_inputtext wpcc_inputtext_26" placeholder="Введите площадь" data-type="inputtext" data-fid="26" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
+                                            type="number" min="0" name="wpcc_structure[26]" value="" class="wpcc_jq_action wpcc_jq_action_26 wpcc_inputtext wpcc_inputtext_26" placeholder="Введите площадь, м2" data-type="inputtext" data-fid="26" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
                                 </div>
                                 <div class="wpcc_clear"></div>
                             </div>
@@ -562,7 +566,7 @@
 
                             <div class="wpcc_box wpcc_box_15" style="display: block;">
                                 <div class="wpcc_description">
-                                    <h3>Химическая чистка диванов</h3>
+                                    <h3>Химическая чистка диванов (посадочное место)</h3>
                                 </div>
                                 <div class="wpcc_fields">
                                     <input v-model="services.sofaDryClean.qty"
@@ -614,23 +618,11 @@
                                 </div>
                                 <div class="wpcc_fields">
                                     <input v-model="services.floorDryClean.qty"
-                                            type="number" min="0" name="wpcc_structure[29]" value="" class="wpcc_jq_action wpcc_jq_action_29 wpcc_inputtext wpcc_inputtext_29" placeholder="Введите площадь" data-type="inputtext" data-fid="29" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
+                                            type="number" min="0" name="wpcc_structure[29]" value="" class="wpcc_jq_action wpcc_jq_action_29 wpcc_inputtext wpcc_inputtext_29" placeholder="Введите площадь, м2" data-type="inputtext" data-fid="29" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
                                 </div>
                                 <div class="wpcc_clear"></div>
                             </div>
                             <!--Химическая чистка пола (ламинат, кафель, паркет)-->
-
-                            <div class="wpcc_box wpcc_box_31" style="display: block;">
-                                <div class="wpcc_description">
-                                    <h3>Химическая чистка пола с нанесением защитного полимерного покрытия</h3>
-                                </div>
-                                <div class="wpcc_fields">
-                                    <input v-model="services.floorDryCleanWithCoating.qty"
-                                            type="number" min="0" name="wpcc_structure[31]" value="" class="wpcc_jq_action wpcc_jq_action_31 wpcc_inputtext wpcc_inputtext_31" placeholder="Введите площадь" data-type="inputtext" data-fid="31" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
-                                </div>
-                                <div class="wpcc_clear"></div>
-                            </div>
-                            <!--Химическая чистка пола с нанесением защитного полимерного покрытия-->
 
                             <div class="wpcc_box wpcc_box_33" style="display: block;">
                                 <div class="wpcc_description">
@@ -638,7 +630,7 @@
                                 </div>
                                 <div class="wpcc_fields">
                                     <input v-model="services.marblePolishing.qty"
-                                            type="number" min="0" name="wpcc_structure[33]" value="" class="wpcc_jq_action wpcc_jq_action_33 wpcc_inputtext wpcc_inputtext_33" placeholder="Введите площадь" data-type="inputtext" data-fid="33" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
+                                            type="number" min="0" name="wpcc_structure[33]" value="" class="wpcc_jq_action wpcc_jq_action_33 wpcc_inputtext wpcc_inputtext_33" placeholder="Введите площадь, м2" data-type="inputtext" data-fid="33" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
                                 </div>
                                 <div class="wpcc_clear"></div>
                             </div>
@@ -650,7 +642,7 @@
                                 </div>
                                 <div class="wpcc_fields">
                                     <input v-model="services.highRiseCleaning.qty"
-                                            type="number" min="0" name="wpcc_structure[43]" value="" class="wpcc_jq_action wpcc_jq_action_43 wpcc_inputtext wpcc_inputtext_43" placeholder="Введите площадь" data-type="inputtext" data-fid="43" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
+                                            type="number" min="0" name="wpcc_structure[43]" value="" class="wpcc_jq_action wpcc_jq_action_43 wpcc_inputtext wpcc_inputtext_43" placeholder="Введите площадь, м2" data-type="inputtext" data-fid="43" data-action="" data-price="" data-default="0" data-validation="" data-maxchar="" data-exclude="1" data-data="data">
                                 </div>
                                 <div class="wpcc_clear"></div>
                             </div>
@@ -695,7 +687,9 @@
                                             </ul>
 
                                             <hr>
-                                            <h4>Всего: <b>{{wholePrice}}</b> грн.</h4>
+                                            <h4>Всего: от <b>{{wholePrice}}</b> грн. <sup>*</sup></h4>
+                                            * - Минимальная сумма заказа <b>650</b> грн.
+                                            Конечная стоимость будет сформирована после общения с менеджером.
                                         </div>
 
                                         <div class="calc-results__btns-wrap">
@@ -712,11 +706,22 @@
                 </div>
             </div> </div><div class="one-third">
             <div class="wpb_text_column ">
-                <div class="wpb_wrapper">
-                    <p>Минимальная сумма заказа 500 гривен.</p>
-                    <p><span id="result_box" class="" lang="ru"><span class="hps">Конечная</span> <span class="hps">стоимость</span> <span class="hps">будет</span> <span class="hps">сформирована</span> <span class="hps">после</span> <span class="hps">общения</span> <span class="hps">с</span> <span class="hps">менеджером</span></span>.</p>
-                    <p><span id="result_box" class="short_text" lang="ru"><span class="hps">Стоимость</span> <span class="hps">других</span> <span class="hps">услуг</span> <span class="hps">обсуждаются</span> <span class="hps">индивидуально</span></span>.
-                    </p></div>
+                <div class="wpb_wrapper calc-extra-info">
+                    <ul>
+                        <li>
+                            <p class="calc-extra-info__title">Минимальная сумма заказа <b>650</b> гривен.</p>
+                        </li>
+
+                        <li>
+                            <p><span id="result_box" class="" lang="ru"><span class="hps">Конечная</span> <span class="hps">стоимость</span> <span class="hps">будет</span> <span class="hps">сформирована</span> <span class="hps">после</span> <span class="hps">общения</span> <span class="hps">с</span> <span class="hps">менеджером</span></span>.</p>
+                        </li>
+
+                        <li>
+                            <p><span id="result_box" class="short_text" lang="ru"><span class="hps">Стоимость</span> <span class="hps">других</span> <span class="hps">услуг</span> <span class="hps">обсуждаются</span> <span class="hps">индивидуально</span></span>.
+                            </p>
+                        </li>
+                    </ul>
+                    </div>
             </div> <div class="g-hr no_icon">
 						<span class="g-hr-h">
 							<i class="fa fa-"></i>

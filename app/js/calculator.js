@@ -3,7 +3,7 @@
 var services = require('./servicesList');
 var calculatorModule = (function () {
     function init(){
-        var modalLink = document.querySelector('[data-popup-id="3"]');
+        var modalLink = document.querySelector('a[data-popup-id="3"]');
         var closeModalBtn = document.querySelector('.js-close-result');
         var orderCallModal = document.querySelector('a[data-popup-id="2"]');
 
@@ -40,7 +40,7 @@ var calculatorModule = (function () {
                 },
 
                 toggleAfterConstructInfo: function () {
-                    this.afterConstructShow = !this.afterConstructShow
+                    this.afterConstructShow = !this.afterConstructShow;
                 },
 
                 redirectToOrder: function () {
@@ -82,12 +82,15 @@ var calculatorModule = (function () {
                     return result;
                 }
             }
-        })
+        });
+
+        return vm;
     }
 
     return {
         init: init
     };
+
 })();
 
 module.exports = calculatorModule;

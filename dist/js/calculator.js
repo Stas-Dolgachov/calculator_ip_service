@@ -4,8 +4,8 @@
 var services = require('./servicesList');
 var calculatorModule = (function () {
     function init() {
-        var modalLink = document.querySelector('a[data-popup-id="3"]');
-        var closeModalBtn = document.querySelector('.js-close-result');
+        var resultModalLink = document.querySelector('a[data-popup-id="3"]');
+        var closeResultModalBtn = document.querySelector('.js-close-result');
         var orderCallModal = document.querySelector('a[data-popup-id="2"]');
 
         var vm = new Vue({
@@ -45,7 +45,7 @@ var calculatorModule = (function () {
                 },
 
                 redirectToOrder: function redirectToOrder() {
-                    closeModalBtn.click();
+                    closeResultModalBtn.click();
                     orderCallModal.click();
                 },
 
@@ -79,7 +79,7 @@ var calculatorModule = (function () {
                     this.result = result;
                     this.wholePrice = wholePrice;
 
-                    modalLink.click();
+                    resultModalLink.click();
                     return result;
                 }
             }
@@ -129,11 +129,17 @@ function computePriceForFourRanges(priceList, qty) {
 
     if (qty <= 50) {
         return qty * low;
-    } else if (qty > 50 && qty <= 200) {
+    }
+
+    if (qty > 50 && qty <= 200) {
         return qty * medium;
-    } else if (qty > 200 && qty <= 500) {
+    }
+
+    if (qty > 200 && qty <= 500) {
         return qty * high;
-    } else if (qty > 500) {
+    }
+
+    if (qty > 500) {
         return qty * veryHigh;
     }
 }

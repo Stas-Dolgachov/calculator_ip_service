@@ -3,8 +3,8 @@
 var services = require('./servicesList');
 var calculatorModule = (function () {
     function init(){
-        var modalLink = document.querySelector('a[data-popup-id="3"]');
-        var closeModalBtn = document.querySelector('.js-close-result');
+        var resultModalLink = document.querySelector('a[data-popup-id="3"]');
+        var closeResultModalBtn = document.querySelector('.js-close-result');
         var orderCallModal = document.querySelector('a[data-popup-id="2"]');
 
         var vm = new Vue({
@@ -44,7 +44,7 @@ var calculatorModule = (function () {
                 },
 
                 redirectToOrder: function () {
-                    closeModalBtn.click();
+                    closeResultModalBtn.click();
                     orderCallModal.click();
                 },
 
@@ -78,7 +78,7 @@ var calculatorModule = (function () {
                     this.result = result;
                     this.wholePrice = wholePrice;
 
-                    modalLink.click();
+                    resultModalLink.click();
                     return result;
                 }
             }

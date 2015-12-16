@@ -12,11 +12,17 @@ function computePriceForFourRanges(priceList, qty) {
 
     if (qty <= 50) {
         return qty * low;
-    } else  if (qty > 50 && qty <= 200) {
+    }
+
+    if (qty > 50 && qty <= 200) {
         return qty * medium;
-    } else if (qty > 200 && qty <= 500) {
+    }
+
+    if (qty > 200 && qty <= 500) {
         return qty * high;
-    } else if (qty > 500) {
+    }
+
+    if (qty > 500) {
         return qty * veryHigh;
     }
 }
@@ -201,4 +207,3 @@ var  services = {
 };
 
 module.exports = services;
-
